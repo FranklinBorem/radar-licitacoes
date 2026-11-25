@@ -1,6 +1,37 @@
 {% extends "base.html" %}
 
 {% block conteudo %}
-<h1>Onde o setor publico compra o que voce vende?</h1>
-<p>Em construcao. Em breve: pesquisa de oportunidades por produto, municipio e orgao.</p>
+<h1>Onde o setor público compra o que você vende?</h1>
+
+<form id="filtros" class="filtros">
+  <input name="texto" placeholder="Produto ou objeto (ex.: papel A4)">
+  <input name="municipio" placeholder="Município">
+  <select name="modalidade">
+    <option value="">Todas as modalidades</option>
+    <option value="6">Pregão eletrônico</option>
+    <option value="8">Dispensa</option>
+  </select>
+  <label><input type="checkbox" name="abertas" value="true"> Só com prazo aberto</label>
+  <button type="submit">Buscar</button>
+</form>
+
+<p id="status" class="status"></p>
+
+<div class="rolagem">
+  <table id="tabela" class="tabela">
+    <thead>
+      <tr><th>Órgão</th><th>Município</th><th>Objeto</th>
+          <th>Valor estimado</th><th>Encerra em</th><th></th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div class="paginacao">
+  <button id="anterior" type="button">Anterior</button>
+  <span id="pagina">1</span>
+  <button id="proxima" type="button">Próxima</button>
+</div>
+
+<section id="detalhe" class="detalhe" hidden></section>
 {% endblock %}

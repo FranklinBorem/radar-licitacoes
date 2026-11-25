@@ -28,7 +28,7 @@ body {
 }
 
 .conteudo {
-  max-width: 960px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
@@ -39,3 +39,20 @@ body {
   text-align: center;
   color: #52606d;
 }
+
+.filtros { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; align-items: center; }
+.filtros input[type="text"], .filtros input:not([type]), .filtros select {
+  padding: 0.5rem; border: 1px solid var(--cor-borda); border-radius: 6px; font: inherit;
+}
+button {
+  padding: 0.5rem 0.9rem; border: 0; border-radius: 6px; cursor: pointer;
+  background: var(--cor-destaque); color: #fff; font: inherit;
+}
+button:disabled { background: var(--cor-borda); cursor: default; }
+.status { color: #52606d; min-height: 1.5rem; }
+.rolagem { overflow-x: auto; }
+.tabela { width: 100%; border-collapse: collapse; background: #fff; font-size: 0.9rem; }
+.tabela th, .tabela td { padding: 0.5rem; border-bottom: 1px solid var(--cor-borda); text-align: left; vertical-align: top; }
+.paginacao { display: flex; gap: 1rem; align-items: center; justify-content: center; margin: 1rem 0; }
+.detalhe { margin-top: 2rem; padding: 1rem 1.5rem; background: #fff; border: 1px solid var(--cor-borda); border-radius: 8px; }
+.fonte { font-size: 0.875rem; color: #52606d; }
