@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Radar Comercial B2G{% endblock %}</title>
+  <meta name="description" content="{% block descricao %}Inteligencia comercial com dados publicos de compras e licitacoes.{% endblock %}">
+  <link rel="stylesheet" href="/static/css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <a class="marca" href="/">Radar Comercial B2G</a>
+  </header>
+
+  <main class="conteudo">
+    {% block conteudo %}{% endblock %}
+  </main>
+
+  <footer class="rodape">
+    <p>Dados do Portal Nacional de Contratacoes Publicas (PNCP). <span id="ano"></span></p>
+  </footer>
+
+  <script src="/static/js/app.js"></script>
+</body>
+</html>
