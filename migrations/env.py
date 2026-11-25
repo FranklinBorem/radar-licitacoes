@@ -1,4 +1,8 @@
 """Configuracao do Alembic (controle das mudancas nas tabelas do banco)."""
+import os
+import psycopg2
+
+
 from logging.config import fileConfig
 
 from alembic import context
@@ -6,6 +10,8 @@ from sqlalchemy import engine_from_config, pool
 
 from radar.config import configuracoes
 from radar.infra.banco import Base
+
+conn = psycopg2.connect(os.environ["DATABASE_URL"])
 
 # Importe aqui os modelos das tabelas quando eles existirem,
 # para o Alembic enxerga-los. Exemplo:
